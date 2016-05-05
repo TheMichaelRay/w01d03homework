@@ -15,7 +15,7 @@
       <button type="button" id="cClearButton">Clear!</button>
     </section>
     <div class="Results">
-      <h2>The temperature is <span></span></h2>
+      <h2>The temperature is <span>...</span></h2>
     </div>
 
 
@@ -28,16 +28,16 @@
       var cClear = document.querySelector('#cClearButton');
       var fClear = document.querySelector('#fClearButton');
       function convertToC(temp) {
-        var temp = fText.value;
-        if (temp !=== 'number' ) {
+        var temp = Number(fText.value);
+        if (isNaN(temp)) {
           alert('That is not a number sir.');
         } else {
         output.innerHTML = ((temp-32)/1.8) + "C";
       }
       };
       function convertToF(temp) {
-        var temp = cText.value;
-        if (temp=== '' || typeof(temp) === 'string' ) {
+        var temp = Number(cText.value);
+        if (isNaN(temp)) {
           alert('That is not a number sir.');
         } else {
         output.innerHTML = (temp*1.8+32) + 'F';
@@ -45,6 +45,8 @@
       }
 
       cButton.addEventListener('click', convertToF);
+      fText.addEventListener('keyup', convertToC);
+      cText.addEventListener('keyup', convertToF);
       fButton.addEventListener('click', convertToC);
       cClear.addEventListener('click', function(){
         cText.value = '';
