@@ -1,0 +1,26 @@
+body {
+  font-family: helvetica;
+  background-color: #666;
+  color: white;
+  font-weight: bold;
+}
+.results {
+  text-align: center;
+  margin: 100px 0px;
+}
+section {
+  text-align: center;
+}
+input {
+  padding: 10px 5px;
+  font-size: 24px;
+  width: 50px;
+  margin: 10px;
+  border-radius: 10px;
+}
+button {
+  padding: 8px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 5px;
+}
