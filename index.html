@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Temperature Converter</title>
-
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <section>
@@ -32,7 +32,7 @@
         if (isNaN(temp)) {
           alert('That is not a number sir.');
         } else {
-        output.innerHTML = ((temp-32)/1.8) + "C";
+        output.innerHTML = Math.round((temp-32)/.18)/10 + "C";
       }
       };
       function convertToF(temp) {
@@ -40,7 +40,7 @@
         if (isNaN(temp)) {
           alert('That is not a number sir.');
         } else {
-        output.innerHTML = (temp*1.8+32) + 'F';
+        output.innerHTML = Math.round((temp*1.8+32)*10)/10 + 'F';
       }
       }
 
